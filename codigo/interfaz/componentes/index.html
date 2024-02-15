@@ -1,0 +1,1210 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../root/">
+      
+      
+        <link rel="next" href="../../logica/utilidades/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
+    
+    
+      
+        <title>Componentes - Tutorial Python YouTube Downloader</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#componentes-de-la-interfaz" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Tutorial Python YouTube Downloader" class="md-header__button md-logo" aria-label="Tutorial Python YouTube Downloader" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutorial Python YouTube Downloader
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Componentes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Tutorial Python YouTube Downloader" class="md-nav__button md-logo" aria-label="Tutorial Python YouTube Downloader" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Tutorial Python YouTube Downloader
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Primeros pasos
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Primeros pasos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../primeros_pasos/empezando/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Empezando
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../primeros_pasos/librerias/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Librerías
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../primeros_pasos/imports/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Importando librerías
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Escribiendo el código
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Escribiendo el código
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Creando la interfaz
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Creando la interfaz
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../root/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Root
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Componentes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-de-los-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de los links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-para-los-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta para los links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boton-de-seleccion-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Botón de selección de directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-para-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta para directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkbox-para-mp3-y-mp4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checkbox para .mp3 y .mp4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boton-de-descarga" class="md-nav__link">
+    <span class="md-ellipsis">
+      Botón de descarga
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-para-la-lista-de-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta para la lista de reproducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-para-la-descarga-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta para la descarga actual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-con-el-contador-para-la-lista-de-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta con el contador para la lista de reproducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boton-para-mostrar-las-descargas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Botón para mostrar las descargas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Creando la lógica
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Creando la lógica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logica/utilidades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilidades
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logica/descarga_unica/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Descarga única
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logica/descarga_lista/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Descarga lista de reproducción
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logica/descarga/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Función de descarga
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logica/vinculacion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vinculando las funciones con los botones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logica/comprobando/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Test final
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Creando instalador
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Creando instalador
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../instalador/pyinstaller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pyinstaller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entrada-de-los-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entrada de los links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-para-los-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta para los links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boton-de-seleccion-de-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Botón de selección de directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-para-directorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta para directorio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checkbox-para-mp3-y-mp4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Checkbox para .mp3 y .mp4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boton-de-descarga" class="md-nav__link">
+    <span class="md-ellipsis">
+      Botón de descarga
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-para-la-lista-de-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta para la lista de reproducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-para-la-descarga-actual" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta para la descarga actual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etiqueta-con-el-contador-para-la-lista-de-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Etiqueta con el contador para la lista de reproducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boton-para-mostrar-las-descargas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Botón para mostrar las descargas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="componentes-de-la-interfaz">Componentes de la interfaz</h1>
+<p>Ahora que tenemos nuestro <code>root</code> configurado, empezaremos a crear los componentes que formarán nuestra interfaz.</p>
+<p>Pondremos todos estos componentes debajo de la configuración de <code>root</code>.</p>
+<h2 id="entrada-de-los-links">Entrada de los links</h2>
+<p>Para crear la entrada donde introduciremos los links para descargar, crearemos una instancia de <code>ctk.CTkEntry</code> y renderizaremos con <code>.pack()</code>:</p>
+<pre><code class="language-python">link_entry = ctk.CTkEntry(root,
+                           placeholder_text='Introduce un link o una lista de reproducción de YouTube',
+                           width=600)
+link_entry.pack(pady=30)
+</code></pre>
+<p>Los componentes necesitan una instancia en la que ser colocados. Eso será el primer parámetro: <code>root</code>.</p>
+<p>En el caso de <code>link_entry</code>, además colocaremos un <code>placeholder_text</code>, que no es más que el texto predefinido que tendrá dentro.</p>
+<p>También le daremos un ancho (<code>width</code>) de 600px, para que ocupe casi todo el espacio.</p>
+<p>Por último, en el método pack le diremos que tenga un padding vertical (<code>pady</code>) de 30px para que no esté pegado a la parte superior de la ventana.</p>
+<p>Puedes ver cómo va quedando ejecutando el archivo del programa.</p>
+<p>Hasta ahora debería verse así:</p>
+<p><img alt="1707848612264" src="../image/componentes/1707848612264.png" /></p>
+<h2 id="etiqueta-para-los-links">Etiqueta para los links</h2>
+<p>Crearemos una etiqueta para avisar de si hay algún error con los links:</p>
+<pre><code>link_label = ctk.CTkLabel(root, text='', text_color='red')
+link_label.pack()
+</code></pre>
+<p>Le pondremos un <code>text_color</code> red.</p>
+<h2 id="boton-de-seleccion-de-directorio">Botón de selección de directorio</h2>
+<p>Ahora crearemos un botón para seleccionar dónde queremos que se descarguen nuestros links.</p>
+<p>Para ello, crearemos una instancia de <code>ctk.CTkButton</code>:</p>
+<pre><code class="language-python">output_button = ctk.CTkButton(root, text='Seleccionar directorio')
+output_button.pack()
+</code></pre>
+<p><code>text</code> es el texto que tendrá el botón.</p>
+<h2 id="etiqueta-para-directorio">Etiqueta para directorio</h2>
+<p>También crearemos una etiqueta o label con una instancia de <code>ctk.CTkLabel</code>:</p>
+<pre><code class="language-python">output_label = ctk.CTkLabel(root, text='', text_color='cyan')
+output_label.pack()
+</code></pre>
+<p>La dejaremos vacía, puesto que servirá para mostrar la ruta que hemos seleccionado para las descargas. Le pondremos un <code>text_color</code> cyan.</p>
+<h2 id="checkbox-para-mp3-y-mp4">Checkbox para .mp3 y .mp4</h2>
+<p>A continuación crearemos los checkbox para los formatos de salida del link con instancias de <code>ctk.CTkCheckBox</code>:</p>
+<pre><code class="language-python">mp3_checked = ctk.StringVar(value=&quot;off&quot;)
+mp4_checked = ctk.StringVar(value=&quot;off&quot;)
+
+mp3_checkbox = ctk.CTkCheckBox(
+    master=root, text='.mp3', variable=mp3_checked,  onvalue='on', offvalue='off')
+mp3_checkbox.pack(pady=10)
+
+mp4_checkbox = ctk.CTkCheckBox(
+    master=root, text='.mp4', variable=mp4_checked,  onvalue='on', offvalue='off')
+mp4_checkbox.pack(pady=10)
+</code></pre>
+<p><code>mp3_checked</code> y <code>mp4_checked</code> son variables que servirán para guardar el estado de los checkbox.</p>
+<p>Los parámetros <code>onvalue</code> y <code>offvalue</code> son los valores que tendrá la variable que hayamos puesto en <code>variable</code>, en este caso <code>mp3_checked</code> y <code>mp4_checked</code>. El valor de las mismas cambiará en función de si el checkbox está chequeado o no.</p>
+<h2 id="boton-de-descarga">Botón de descarga</h2>
+<p>Después crearemos el botón de descarga:</p>
+<pre><code class="language-python">download_button = ctk.CTkButton(root, text='Descargar')
+download_button.pack(pady=10)
+</code></pre>
+<h2 id="etiqueta-para-la-lista-de-reproduccion">Etiqueta para la lista de reproducción</h2>
+<p>Crearemos una etiqueta para mostrar el título de la lista de reproducción que estamos descargando:</p>
+<pre><code class="language-python">playlist_label = ctk.CTkLabel(root, text='', wraplength=400, text_color='cyan')
+playlist_label.pack()
+</code></pre>
+<p>El atributo <code>wraplength</code> sirve para indicar en qué punto queremos que el texto de la etiqueta salte a la siguiente línea, ocupando así menos espacio.</p>
+<p>El atributo <code>text_color</code> es para cambiar el color del texto de la etiqueta. Nosotros lo pondremos color <code>cyan</code>, aunque puedes ponerlo del color que quieras. Es recomendable que sea de un color que facilite la legibilidad.</p>
+<p>Puedes usar el nombre de un color o valores <code>hex</code> (#ff4335).</p>
+<h2 id="etiqueta-para-la-descarga-actual">Etiqueta para la descarga actual</h2>
+<p>También crearemos una etiqueta para mostrar el título del vídeo que estamos descargando, así como para indicar que la descarga ha terminado.</p>
+<pre><code class="language-python">complete_label = ctk.CTkLabel(root, text='', wraplength=400)
+complete_label.pack()
+</code></pre>
+<h2 id="etiqueta-con-el-contador-para-la-lista-de-reproduccion">Etiqueta con el contador para la lista de reproducción</h2>
+<p>Crearemos una etiqueta para mostrar por qué video va la descarga y el total de vídeos de la lista de reproducción:</p>
+<pre><code class="language-python">count_label = ctk.CTkLabel(root, text='', text_color='cyan')
+count_label.pack()
+</code></pre>
+<h2 id="boton-para-mostrar-las-descargas">Botón para mostrar las descargas</h2>
+<p>Por último crearemos un botón para abrir el directorio de descargas una vez hayan terminado:</p>
+<pre><code class="language-python">open_folder_button = ctk.CTkButton(root, text='Abrir descargas')
+</code></pre>
+<p>No haremos <code>.pack()</code> porque queremos mostrar el botón cuando hayan terminado las descargas.</p>
+<p>Con esto ya hemos terminado de crear nuestra interfaz. Debería verse así:</p>
+<p><img alt="1707854726281" src="../image/componentes/1707854726281.png" /></p>
+<p>Y nuestro código así:</p>
+<pre><code class="language-python">from pytube import YouTube, Playlist
+import customtkinter as ctk
+import re
+import threading
+import os
+
+
+root = ctk.CTk()
+root.title('Youtube Downloader')
+root.geometry('700x450')
+root.iconbitmap('youtube.ico')
+
+
+link_entry = ctk.CTkEntry(root,
+                          placeholder_text='Introduce un link o una lista de reproducción de YouTube',
+                          width=600)
+link_entry.pack(pady=30)
+
+output_button = ctk.CTkButton(root, text='Seleccionar directorio')
+output_button.pack()
+
+output_label = ctk.CTkLabel(root, text='', text_color='cyan')
+output_label.pack()
+
+mp3_checked = ctk.StringVar(value=&quot;off&quot;)
+mp4_checked = ctk.StringVar(value=&quot;off&quot;)
+
+mp3_checkbox = ctk.CTkCheckBox(
+    master=root, text='.mp3', variable=mp3_checked,  onvalue='on', offvalue='off')
+mp3_checkbox.pack(pady=10)
+
+mp4_checkbox = ctk.CTkCheckBox(
+    master=root, text='.mp4', variable=mp4_checked,  onvalue='on', offvalue='off')
+mp4_checkbox.pack(pady=10)
+
+download_button = ctk.CTkButton(root, text='Descargar')
+download_button.pack(pady=10)
+
+playlist_label = ctk.CTkLabel(root, text='', wraplength=400, text_color='cyan')
+playlist_label.pack()
+
+complete_label = ctk.CTkLabel(root, text='', wraplength=400)
+complete_label.pack()
+
+count_label = ctk.CTkLabel(root, text='', text_color='cyan')
+count_label.pack()
+
+open_folder_button = ctk.CTkButton(root, text='Abrir descargas')
+
+root.mainloop()
+
+</code></pre>
+<p>Ahora que ya tenemos nuestra interfaz terminada, <a href="../../logica/utilidades/">vayamos con la lógica de nuestro programa</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+
+
+
+<h4>Cookie consent</h4>
+<p>We use cookies to recognize your repeated visits and preferences, as well as to measure the effectiveness of our documentation and whether users find what they're searching for. With your consent, you're helping us to make our documentation better.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.progress"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.caa56a14.min.js"></script>
+      
+    
+  </body>
+</html>
