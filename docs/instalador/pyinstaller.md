@@ -19,5 +19,3 @@ Una vez hecho esto podremos ejecutar `youtube_downloader.exe` y comprobar que fu
 Podremos crear un acceso directo del ejecutable y ponerlo donde queramos.
 
 Con esto finaliza el tutorial. ¡Espero que hayas disfrutado y aprendido mucho en el camino!
-
-Sa
