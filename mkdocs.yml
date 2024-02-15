@@ -1,0 +1,56 @@
+site_name: Tutorial Python YouTube Downloader
+markdown_extensions:
+  - pymdownx.keys
+theme:
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+  language: es
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: teal
+      accent: light green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      accent: light green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+      - manage
+
+nav:
+  - Inicio: 'index.md'
+  - Primeros pasos: 
+    - Empezando: 'primeros_pasos/empezando.md'
+    - Librerías: 'primeros_pasos/librerias.md'
+    - Importando librerías: 'primeros_pasos/imports.md'
+  - Escribiendo el código:
+    - Creando la interfaz:
+      - Root: 'codigo/interfaz/root.md'
+      - Componentes: 'codigo/interfaz/componentes.md'
+    - Creando la lógica:
+      - Utilidades: 'codigo/logica/utilidades.md'
+      - Descarga única: 'codigo/logica/descarga_unica.md'
+      - Descarga lista de reproducción: 'codigo/logica/descarga_lista.md'
+      - Función de descarga: 'codigo/logica/descarga.md'
+      - Vinculando las funciones con los botones: 'codigo/logica/vinculacion.md'
+      - Test final: 'codigo/logica/comprobando.md'
+  - Creando instalador:
+    - Pyinstaller: 'instalador/pyinstaller.md'
